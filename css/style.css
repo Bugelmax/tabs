@@ -1,0 +1,378 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+
+  ROOT ELEMENTS
+  
+----------------------------------------------------------------------------- */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: #6d6d6d;
+  background-color: #e6eef0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* -----------------------------------------------------------------------------
+
+  MEDIA ELEMENTS
+  
+----------------------------------------------------------------------------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -----------------------------------------------------------------------------
+
+  CONTAINER OBJECTS
+  
+----------------------------------------------------------------------------- */
+
+.o-container {
+  margin: 0 auto;
+  padding: 0 12px;
+  /*max-width: 960px;*/
+}
+
+@media all and (min-width: 480px) {
+  .o-container {
+    padding: 0 24px;
+  }
+}
+
+@media all and (min-width: 720px) {
+  .o-container {
+    padding: 0 48px;
+  }
+}
+
+.o-section {
+  margin: 24px 0;
+}
+
+.o-section:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 720px) {
+  .o-section {
+    margin-bottom: 48px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  SUB-NAVIGATION OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-sub-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.o-sub-nav__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.o-sub-nav__item {
+  margin: 0;
+  padding: 4px;
+}
+
+.o-sub-nav__link {
+  display: block;
+  margin: 0;
+  padding: 4px 24px;
+  border: solid 2px #dc446e;
+}
+
+.o-sub-nav__link:hover,
+.o-sub-nav__item.active .o-sub-nav__link {
+  color: #fff;
+  background-color: #dc446e;
+}
+
+@media all and (min-width: 480px) {
+  .o-footer {
+    padding: 24px 0;
+  }
+}
+
+@media all and (min-width: 720px) {
+  .o-footer {
+    padding: 48px 0;
+  }
+}
+
+.c-tabs-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchResult {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  color: #000;
+  background: #fff;
+  border: 2px solid #e6e6e6;
+  padding-left: 45px;
+  border-left: none;
+  border-right: none;
+}
+
+.searchResult p {
+  margin-right: 20px;
+  font-size: 13px;
+  font-family: Arial;
+  color: #606060;
+}
+
+.searchResult span {
+  color: #4e6794;
+  font-weight: bold;
+}
+
+.c-tabs-nav__link {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 4px;
+  padding: 12px;
+  color: #606060;
+  background-color: #f9f9f9;
+  text-align: center;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  border-radius: 10px 10px 0 0;
+
+}
+
+.c-tabs-nav__link:last-child {
+  margin-right: 0;
+}
+
+.c-tabs-nav__link:hover {
+  color: #6d6d6d;
+}
+
+.c-tabs-nav__link.is-active {
+  color: #049672;
+  background-color: #fff;
+}
+
+.c-tabs-nav__link i,
+.c-tabs-nav__link span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.c-tabs-nav__link i {
+  font-size: 18px;
+}
+
+.c-tabs-nav__link span {
+  display: none;
+  font-size: 14px;
+}
+
+@media all and (min-width: 720px) {
+  .c-tabs-nav__link i {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+  .c-tabs-nav__link span {
+    display: block;
+  }
+}
+
+/**
+ * Tab
+ */
+
+.c-tab {
+  display: none;
+  background-color: #f9f9f9;
+}
+
+.c-tab.is-active {
+  display: block;
+}
+
+.c-tab__content {
+  /*padding: 1.5rem;*/
+  height: 100vh;
+}
+
+
+.c-tabs.no-js .c-tabs-nav {
+  display: none;
+}
+
+.c-tabs.no-js .c-tab {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.c-tabs.no-js .c-tab:last-child {
+  margin-bottom: 0;
+}
+
+select {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  background-image: url(../img/arrow_down_icon.png);
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  background-color: #fff;
+}
+
+.selectProduct {
+  text-align: right;
+}
+
+.selectProduct select {
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+table.table {
+  background: #d4edf9;
+  width: 100%;
+  text-align: left;
+}
+
+table.table thead {
+  background-color: #d4edf9;
+  border: 1px solid #d4edf9;
+  text-align: center;
+}
+
+table.table thead th {
+  padding: 5px;
+  background: url(../img/arrows.png) no-repeat 95% 50%;
+}
+
+table.table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table.table tbody tr:nth-child(even) {
+  background-color: #f9fafe;
+}
+
+table.table tbody tr:last-child {
+  border-bottom: 1px solid black
+}
+
+.table thead .probuctCode {
+  width: 120px;
+}
+
+.table.tableNew thead .productAction,
+.table.tableSuccess thead .productAction {
+  width: 100px;
+}
+
+.table.tableOffered thead .productAction {
+  width: 150px;
+}
+
+table.table td {
+  padding: 5px 0;
+}
+
+table.table :nth-child(3) {
+  font-weight: bold;
+}
+
+table.table .tableTextCenter {
+  text-align: center;
+}
+
+table.table .tabletextLeft {
+  text-align: left;
+  padding-left: 20px;
+}
+
+table.table .greentext {
+  color: #0ab35d;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+table.table img {
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+table.table .double {
+  background-color: #00b9ee;
+}
+
+table.table .accept {
+  background-color: #3faf6c;
+}
+
+table.table .deleteProduct {
+  background-color: #ec6446;
+}
+
+table.table .plus {
+  background-color: #f9b256;
+}
+
+table.table .link {
+  background-color: #5972b6;
+}
